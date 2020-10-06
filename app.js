@@ -1,7 +1,6 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
-let expressValidator = require('express-validator');
 require('dotenv').config()
 
 let app = express();
