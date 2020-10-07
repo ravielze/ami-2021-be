@@ -8,8 +8,7 @@ app.use(bodyParser.urlencoded({
    extended: true
 }));
 app.use(bodyParser.json());
-app.use(expressValidator());
-mongoose.connect('mongodb://localhost/ami', { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.DB || 'mongodb://localhost/ami', { useNewUrlParser: true, useUnifiedTopology: true});
 var db = mongoose.connection;
 if(!db)
     console.log("> Error connecting db")

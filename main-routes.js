@@ -1,6 +1,7 @@
 let router = require('express').Router();
 let fj = require('./data/fakultasjurusan');
-var ceritaController = require('./controller/ceritaController');
+let ceritaController = require('./controller/ceritaController');
+const { validateCerita } = require('./validator/ceritaV');
 
 router.get('/', function (req, res) {
     res.json({
@@ -13,7 +14,7 @@ router.get('/fakultas', function (req, res) {
     res.end(JSON.stringify({data: fj.jurusan}));
 });
 
-router.route('/cerita')
-    .get(ceritaController.index).post(ceritaController.new);
+router.route('/cerita').get(ceritaController.index);
+router.route('/cerita').post(validateCerita, ceritaController.new);
 
 module.exports = router;

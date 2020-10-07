@@ -6,10 +6,8 @@ var ceritaSchema = mongoose.Schema({
     nim: Number,
     jurusan: String,
     angkatan: Number,
-    line_id: {
-        type: String,
-        lowercase: true
-    },
+    line_id: String,
+    cerita: String,
     create_date: {
         type: Date,
         default: Date.now
