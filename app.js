@@ -1,12 +1,16 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
+let helmet = require('helmet');
 require('dotenv').config()
 
 let app = express();
 app.use(bodyParser.urlencoded({
    extended: true
 }));
+app.use(helmet());
+app.disable('x-powered-by');
+
 app.use(bodyParser.json());
 mongoose.connect(process.env.DB || 'mongodb://localhost/ami', { useNewUrlParser: true, useUnifiedTopology: true});
 var db = mongoose.connection;
