@@ -9,9 +9,15 @@ exports.index = function (req, res) {
                 data: []
             });
         } else {
+            let lc = [];
+            let id = 1;
+            listCerita.forEach(function(crt){
+                lc.push({"ID": id, "Pengirim": crt.nama + " " + crt.nim, "Jurusan": crt.jurusan + " " + crt.angkatan, "Cerita": crt.cerita});
+                id = id+1;
+            });
             res.status(200).json({
                 status: "success",
-                data: listCerita
+                data: lc
             });
         }
     });
