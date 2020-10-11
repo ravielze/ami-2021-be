@@ -5,8 +5,8 @@ let ceritaController = require('./controller/ceritaController');
 const { validateCerita } = require('./validator/ceritaV');
 
 const postCeritaLimiter = rateLimit({
-    windowMs: 60 * 60 * 1000, // 1 hour window
-    max: 3, // start blocking after 5 requests
+    windowMs: 60 * 60 * 1000,
+    max: 5,
     message:
       "Too many request created from this IP, please try again after an hour"
   });
