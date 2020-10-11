@@ -28,8 +28,8 @@ exports.new = async function (req, res) {
     if (!errors.isEmpty()) {
         return res.status(406).json({ status: "not_accepted", data: [] });
     }
-    const {nama, nim, jurusan, angkatan, line_id, cerita} = req.body;
-    await Cerita.create({nama, nim, jurusan, angkatan, line_id, cerita});
+    const {nama, nim, jurusan, fakultas, angkatan, line_id, cerita} = req.body;
+    await Cerita.create({nama, nim, jurusan, fakultas, angkatan, line_id, cerita});
     res.status(201).json({
         status: "success",
         data: {nama, nim, jurusan, angkatan, line_id, cerita}

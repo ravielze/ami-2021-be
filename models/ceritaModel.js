@@ -5,6 +5,7 @@ var ceritaSchema = mongoose.Schema({
     nama: String,
     nim: Number,
     jurusan: String,
+    fakultas: String,
     angkatan: Number,
     line_id: String,
     cerita: String,
