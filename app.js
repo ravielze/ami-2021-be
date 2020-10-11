@@ -24,6 +24,7 @@ else
 app.get('/', (req, res) => res.send('AMI 2021 - API'));
 let apiR = require("./main-routes");
 app.use('/api', apiR);
+app.set('trust proxy', 1);
 
 var port = process.env.PORT || 8080;
 app.listen(port, function () {
