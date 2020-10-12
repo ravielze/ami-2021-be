@@ -17,7 +17,7 @@ exports.jurusan = {
       FSRD: [
         "TAHAP PERSIAPAN BERSAMA (TPB)",
         "SENI RUPA",
-        "KRIA",
+        "KRIYA",
         "DESAIN INTERIOR",
         "DESAIN KOMUNIKASI VISUAL",
         "DESAIN PRODUK",
@@ -29,7 +29,7 @@ exports.jurusan = {
         "TEKNIK INDUSTRI",
         "MANAJEMEN REKAYASA INDUSTRI",
         "TEKNIK PANGAN",
-        "TEKNIK BIOENERGI DAN KEMURDI",
+        "TEKNIK BIOENERGI DAN KEMURGI",
       ],
       FTMD: [
         "TAHAP PERSIAPAN BERSAMA (TPB)",
