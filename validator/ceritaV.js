@@ -6,6 +6,6 @@ exports.validateCerita = [
     check('jurusan').notEmpty(),
     check('fakultas').notEmpty(),
     check('angkatan').trim().notEmpty().isLength({min:2, max:2}).isInt(),
-    check('cerita').trim().notEmpty().isLength({min:100, max:50000}),
+    check('cerita').notEmpty().isLength({min:100}),
     check('line_id').notEmpty(),
 ]
