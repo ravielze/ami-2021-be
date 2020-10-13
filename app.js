@@ -7,7 +7,8 @@ require('dotenv').config()
 
 let app = express();
 app.use(bodyParser.urlencoded({
-   extended: true
+   extended: true,
+   limit: '5mb'
 }));
 app.use(helmet());
 app.disable('x-powered-by');
